@@ -11,7 +11,7 @@
   --accent: #3e3f3f;
   --dark: #1a1a2e;
   --light: #651e30;
-  --olive: #5c5f3a;       /* background of second section */
+  --olive: #5c5f3a;       
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── NAVBAR ── */
+
 .navbar {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   padding: 1rem 0;
@@ -29,7 +29,7 @@ body {
   border-radius: 15px;
   position: fixed;
   top: 0;
-  width: calc(100% - 20px); /* account for margin on both sides */
+  width: calc(100% - 20px); 
   z-index: 1000;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
@@ -105,7 +105,7 @@ body {
   padding: 0.75rem 2rem;
   border-radius: 50px;
   font-weight: 600;
-  cursor: pointer;           /* fixed: was "painter" */
+  cursor: pointer;           
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -131,7 +131,6 @@ body {
   left: 0;
 }
 
-/* Hide the checkbox toggle by default */
 #nav-toggle {
   display: none;
 }
@@ -156,7 +155,7 @@ body {
   border-radius: 3px;
 }
 
-/* ── HERO ── */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -167,7 +166,7 @@ body {
 .shopNow {
   width: 420px;
   background: #fbf6ab;
-  padding: 50px 40px 60px;   /* more breathing room at bottom */
+  padding: 50px 40px 60px;   
   border-radius: 25px;
   text-align: center;
   display: flex;
@@ -192,24 +191,28 @@ body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 4px solid #651e30;   /* border matches bg so it looks clean */
+  border: 4px solid #cdc1c4;
   background: #651e30;
   color: white;
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  flex-shrink: 0;              /* prevent squishing inside flex column */
-  margin-top: 10px;            /* small gap after the paragraph */
+  flex-shrink: 0;             
+  margin-top: 10px;  
+  position: absolute;
+  left: 50%;
+  bottom: 100px;     
+  transform: translateX(-50%);
 }
 
 .btn:hover {
   transform: scale(1.05);
 }
 
-/* ── SECOND SECTION ── */
+
 .second {
-  background-color: #5c5f3a;   /* olive/army green from screenshot */
+  background-color: #5c5f3a; 
   padding: 80px 40px 100px;
 }
 
@@ -217,7 +220,7 @@ body {
   text-align: center;
   font-size: 3rem;
   font-weight: 800;
-  color: #fbf6ab;              /* yellow from brand palette */
+  color: #fbf6ab;            
   margin-bottom: 60px;
   line-height: 1.15;
 }
@@ -232,8 +235,9 @@ body {
   margin: 0 auto;
 }
 
-/* ── PET CARDS ── */
+
 .pet-card {
+
   width: 220px;
   border-radius: 18px;
   padding: 28px 20px 24px;
@@ -247,33 +251,33 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* Individual card colours from screenshot */
-.dog-card  { background: #fbf6ab; }   /* yellow */
-.cat-card  { background: #f5d0d8; }   /* blush pink */
-.small-card{ background: #651e30; }   /* burgundy/maroon */
-.bird-card { background: #f0ece0; }   /* off-white/cream */
 
-/* Circular image wrapper */
+.dog-card  { background: #fbf6ab; }   
+.cat-card  { background: #f5d0d8; }   
+.small-card{ background: #651e30; }   
+.bird-card { background: #f0ece0; }
+
+
 .pet-img-wrap {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  overflow: visible;        /* allow card padding to clip naturally */
+  overflow: visible;        
   margin: 0 auto 20px;
   background: rgba(255, 255, 255, 0.35);
-  position: relative;
+  position:relative;
 }
 
-/* Clip circle precisely on the wrapper itself */
+
 .pet-img-wrap {
   overflow: hidden;
 }
 
 .pet-img-wrap img {
   width: 100%;
-  height: 115%;             /* show a bit more so ears/head fit inside */
+  height: 100%;             
   object-fit: cover;
-  object-position: center 30%;  /* pull image down so top (ears/head) is visible */
+  object-position: center 30%;  
   display: block;
 }
 
@@ -311,6 +315,7 @@ body {
   #nav-toggle:checked ~ .nav-menu {
     display: flex;
   }
+  
 
   .nav-list {
     flex-direction: column;
@@ -318,8 +323,12 @@ body {
   }
 
   .shopNow {
-    width: 90vw;
-    padding: 36px 24px;
+    width: 300px;
+    background: #ece8a7;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
   }
 
   .shopNow h1 {

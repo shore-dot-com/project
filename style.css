@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: logoFont;
+  src: url(./fonts/ChangaOne-Regular.ttf);
+}
 :root {
   --primary: #fbf6ab;
   --primary-dark: #d6cb2c;
@@ -45,6 +49,7 @@ body {
 }
 
 .logo {
+  font-family: logoFont;
   font-size: 1.75rem;
   font-weight: bold;
   color: var(--light);

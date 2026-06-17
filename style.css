@@ -15,7 +15,7 @@
   --accent: #3e3f3f;
   --dark: #1a1a2e;
   --light: #651e30;
-  --olive: #5c5f3a;       
+  --olive: #5c5f3a;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -25,15 +25,18 @@ body {
   min-height: 100vh;
 }
 
-
 .navbar {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
   padding: 1rem 0;
   margin: 10px;
   border-radius: 15px;
   position: fixed;
   top: 0;
-  width: calc(100% - 20px); 
+  width: calc(100% - 20px);
   z-index: 1000;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
@@ -103,34 +106,47 @@ body {
   width: 100%;
 }
 
+.login-btn{
+  text-decoration:none;
+  color:var(--light);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+}
 .start-btn {
-  background: #fbf6ab;
-  color: var(--dark);
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;           
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
+  background: var(--primary-dark);
 }
 
-.start-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.248);
-  transition: left 0.3s;
+.cart{
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    color: #651e30;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cart-count{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff6b2;
+    pointer-events: none;
 }
 
-.start-btn:hover {
-  transform: translateY(-2px);
+.cart:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.login-btn:hover{
+  transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(72, 191, 227, 0.4);
 }
+  
 
 .start-btn:hover::before {
   left: 0;
@@ -160,7 +176,6 @@ body {
   border-radius: 3px;
 }
 
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -171,7 +186,7 @@ body {
 .shopNow {
   width: 420px;
   background: #fbf6ab;
-  padding: 50px 40px 60px;   
+  padding: 50px 40px 60px;
   border-radius: 25px;
   text-align: center;
   display: flex;
@@ -203,11 +218,11 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  flex-shrink: 0;             
-  margin-top: 10px;  
+  flex-shrink: 0;
+  margin-top: 10px;
   position: absolute;
   left: 50%;
-  bottom: 100px;     
+  bottom: 100px;
   transform: translateX(-50%);
 }
 
@@ -215,9 +230,8 @@ body {
   transform: scale(1.05);
 }
 
-
 .second {
-  background-color: #5c5f3a; 
+  background-color: #5c5f3a;
   padding: 80px 40px 100px;
 }
 
@@ -225,7 +239,7 @@ body {
   text-align: center;
   font-size: 3rem;
   font-weight: 800;
-  color: #fbf6ab;            
+  color: #fbf6ab;
   margin-bottom: 60px;
   line-height: 1.15;
 }
@@ -240,15 +254,15 @@ body {
   margin: 0 auto;
 }
 
-
 .pet-card {
-
   width: 220px;
   border-radius: 18px;
   padding: 28px 20px 24px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .pet-card:hover {
@@ -256,23 +270,28 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-
-.dog-card  { background: #fbf6ab; }   
-.cat-card  { background: #f5d0d8; }   
-.small-card{ background: #651e30; }   
-.bird-card { background: #f0ece0; }
-
+.dog-card {
+  background: #fbf6ab;
+}
+.cat-card {
+  background: #f5d0d8;
+}
+.small-card {
+  background: #651e30;
+}
+.bird-card {
+  background: #f0ece0;
+}
 
 .pet-img-wrap {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  overflow: visible;        
+  overflow: visible;
   margin: 0 auto 20px;
   background: rgba(255, 255, 255, 0.35);
-  position:relative;
+  position: relative;
 }
-
 
 .pet-img-wrap {
   overflow: hidden;
@@ -280,22 +299,30 @@ body {
 
 .pet-img-wrap img {
   width: 100%;
-  height: 100%;             
+  height: 100%;
   object-fit: cover;
-  object-position: center 30%;  
+  object-position: center 30%;
   display: block;
 }
 
-/* Card labels */
+
 .pet-card p {
   font-size: 1.4rem;
   font-weight: 800;
 }
 
-.dog-card  p { color: #651e30; }
-.cat-card  p { color: #651e30; }
-.small-card p { color: #fbf6ab; }
-.bird-card p  { color: #4d4d4d; }
+.dog-card p {
+  color: #651e30;
+}
+.cat-card p {
+  color: #651e30;
+}
+.small-card p {
+  color: #fbf6ab;
+}
+.bird-card p {
+  color: #4d4d4d;
+}
 
 /* ── RESPONSIVE ── */
 @media screen and (max-width: 768px) {
@@ -313,14 +340,13 @@ body {
     padding: 1.5rem 2rem;
     border-radius: 12px;
     min-width: 220px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     gap: 1.5rem;
   }
 
   #nav-toggle:checked ~ .nav-menu {
     display: flex;
   }
-  
 
   .nav-list {
     flex-direction: column;
@@ -352,4 +378,80 @@ body {
     width: 110px;
     height: 110px;
   }
+}
+/* --footer-- */
+
+footer {
+  background-image: url("./images/footer.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 700px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 0;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+.marquee-track span {
+  font-size: 42px;
+  font-weight: 700;
+  padding-right: 80px;
+  white-space: nowrap;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+} 
+
+.footerlogo {
+  margin: 20px;
+  font-family: logofont;
+  color: #fff6b2;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a {
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+.contact {
+  margin: 20px;
+  margin-top: 60px;
+}
+.contact p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+.socials {
+  margin-top: 50px;
+}
+.socials a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 15px;
+}
+.copyright {
+  margin-top: 60px;
+  font-size: 13px;
+  line-height: 1.8;
 }

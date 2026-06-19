@@ -8,6 +8,10 @@
   font-family: logoFont;
   src: url(./fonts/ChangaOne-Regular.ttf);
 }
+@font-face {
+  font-family: myfont;
+  src: url(./fonts/Oswald-Medium.ttf);
+}
 :root {
   --primary: #fbf6ab;
   --primary-dark: #d6cb2c;
@@ -20,16 +24,15 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  background: url("./images/background.jpeg") center / cover no-repeat;
-  min-height: 100vh;
+  font-family: myfont;
+  background-color: #545849;
 }
 
 .navbar {
   background: linear-gradient(
     135deg,
     var(--primary) 0%,
-    var(--primary-dark) 100%
+    var(--primary) 100%
   );
   padding: 1rem 0;
   margin: 10px;
@@ -181,6 +184,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+   background: url("./images/background.jpeg") center / cover no-repeat;
+  min-height: 100vh;   
 }
 
 .shopNow {
@@ -464,6 +469,11 @@ footer {
 
   .shopNow{
     width: 350px;
+  background: #ece8a7;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
   }
 
   .shopNow h1{
@@ -474,6 +484,12 @@ footer {
     width: 120px;
     height: 120px;
     font-size: 1.2rem;
+     height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: -80px;
+  transform: translateX(-50%);
   }
 
   .section-title{
